@@ -39,3 +39,40 @@ Before you start deploying **WireGuard** on your Cloudzy VPS using the One-Click
 
 8. **Review and Deploy**: After confirming all your settings, click the "Deploy Now" button to create your WireGuard VPS. The system will initiate the deployment process, which you can monitor through the progress bar.
  ![image](https://github.com/user-attachments/assets/2dad0161-cbb8-4b4a-93a4-00ffe1133c08)
+
+# Step 3: Access Your WireGuard Server
+
+1. **Wait for VPS Creation:** After clicking “Deploy Now,” the system will take a few minutes to configure your VPS. You'll see a progress indicator showing the stages such as “Preparing Network,” “Preparing Disk,” “Initializing,” and finally, “Active.”  
+![image](https://github.com/user-attachments/assets/e2fc0235-cf8e-4fbd-8a32-f1382f3dc136)
+
+2. **Retrieve Login Information:** Once your VPS has been created successfully, you’ll be taken to a confirmation screen displaying your server’s IP address, username, and password. Make sure to note these credentials to access your WireGuard server.
+![image](https://github.com/user-attachments/assets/14080b0d-d7c4-4926-9248-19931dd96259)
+
+4. **Connect via SSH:**
+   - Open a terminal (or use an SSH client) and connect to your VPS by typing the following command:
+     ```bash
+     ssh root@<Your_VPS_IP_Address>
+     ```
+   - You will likely receive a security warning asking if you want to continue connecting due to the server's fingerprint. Type `yes` to proceed with the connection.  
+     ![image](https://github.com/user-attachments/assets/01519a81-5ea8-4b81-8c49-9db279d9034f)
+
+   - After typing `yes`, enter the password you noted earlier to access your VPS.
+
+5. **Verify WireGuard Installation:**
+   - After successfully logging in, you will see a confirmation message indicating that the WireGuard server has been installed.  
+   ![image](https://github.com/user-attachments/assets/f5d70918-deb9-4390-8a10-fecc1a5555a3)
+
+6. **Access WireGuard Configuration:**
+   - You can check the client configuration details by running the following command to view the `/root/client.conf` file:
+     ```bash
+     cat /root/client.conf
+     ```
+   - This file will contain important information such as:  
+     ![image](https://github.com/user-attachments/assets/04cc042b-4db3-4e4b-ab3e-683a784d8566)
+
+     - The interface details (IP address and DNS).
+     - The private key for the WireGuard server.
+     - The public key for the peer connection.
+     - The endpoint (IP address and port) for configuring the client.
+  
+Your WireGuard server is now fully configured and ready for secure connections.
