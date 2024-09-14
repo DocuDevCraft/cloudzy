@@ -1,5 +1,7 @@
+# How to Deploy WireGuard with Cloudzy’s One-Click App
 
-# Prerequisites
+Setting up a WireGuard VPN on your Cloudzy VPS is a fast and secure way to establish a private network connection. With Cloudzy’s One-Click App, deploying WireGuard is both efficient and straightforward. This guide will walk you through the entire process—from configuring your VPS to setting up and activating the WireGuard client on your local machine. Whether you're using WireGuard for personal privacy, secure communication, or business networking, this step-by-step tutorial will help you get up and running quickly and securely.
+## Prerequisites
 
 Before you start deploying **WireGuard** on your Cloudzy VPS using the One-Click App, ensure that you meet the following requirements:
 
@@ -7,7 +9,7 @@ Before you start deploying **WireGuard** on your Cloudzy VPS using the One-Click
 - **Sufficient Credit**: Confirm that you have enough credit in your account to deploy a new VPS.
 - **Operating System Compatibility**: The WireGuard One-Click App is compatible with Ubuntu Server versions 20.04, 22.04, and 24.04.
 
-# Step 1: Select WireGuard from the Applications Menu
+## Step 1: Select WireGuard from the Applications Menu
 
 1. **Log in to Your Cloudzy Account**: Begin by logging into your account through the Cloudzy Control Panel.
 2. **Navigate to Applications**: On the left-hand menu, go to the “Applications” section.
@@ -16,7 +18,7 @@ Before you start deploying **WireGuard** on your Cloudzy VPS using the One-Click
 6. **Click Deploy Service**: After selecting WireGuard, a blue “Deploy Service” button will appear. Click on this to start configuring your WireGuard VPS.
 ![image](https://github.com/user-attachments/assets/cb923636-2001-4dc1-852f-959732861f3c)
 
-# Step 2: Configure Your VPS
+## Step 2: Configure Your VPS
 
 1. **Select Your Server Location**: On the configuration page, choose a server location that best fits your needs from the available options. For optimal performance, you might want to select a location closer to your target audience. Popular choices include locations like Dallas, Miami, and Frankfurt.
 ![image](https://github.com/user-attachments/assets/a1272cf6-6fa1-4d7f-bea9-0981a68b22b3)
@@ -40,7 +42,7 @@ Before you start deploying **WireGuard** on your Cloudzy VPS using the One-Click
 8. **Review and Deploy**: After confirming all your settings, click the "Deploy Now" button to create your WireGuard VPS. The system will initiate the deployment process, which you can monitor through the progress bar.
  ![image](https://github.com/user-attachments/assets/2dad0161-cbb8-4b4a-93a4-00ffe1133c08)
 
-# Step 3: Access Your WireGuard Server
+## Step 3: Access Your WireGuard Server
 
 1. **Wait for VPS Creation:** After clicking “Deploy Now,” the system will take a few minutes to configure your VPS. You'll see a progress indicator showing the stages such as “Preparing Network,” “Preparing Disk,” “Initializing,” and finally, “Active.”  
 ![image](https://github.com/user-attachments/assets/e2fc0235-cf8e-4fbd-8a32-f1382f3dc136)
@@ -77,14 +79,7 @@ Before you start deploying **WireGuard** on your Cloudzy VPS using the One-Click
   
 Your WireGuard server is now fully configured and ready for secure connections.
 
-Here is the updated Step 4 with part 2 divided into two parts:
-
-
-Here is the updated Step 4 with both Part 2 and Part 5 split into two parts:
-
----
-
-# Step 4: Configure the WireGuard Client on Windows
+## Step 4: Configure the WireGuard Client on Windows
 
 1. **Download and Install the WireGuard Client:**  
    Go to [WireGuard’s official Windows download page](https://download.wireguard.com/windows-client/). Download the installer (`wireguard-installer.exe`) and follow the installation instructions.  
