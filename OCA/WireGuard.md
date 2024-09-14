@@ -76,3 +76,46 @@ Before you start deploying **WireGuard** on your Cloudzy VPS using the One-Click
      - The endpoint (IP address and port) for configuring the client.
   
 Your WireGuard server is now fully configured and ready for secure connections.
+
+Here is the updated Step 4 with part 2 divided into two parts:
+
+
+Here is the updated Step 4 with both Part 2 and Part 5 split into two parts:
+
+---
+
+# Step 4: Configure the WireGuard Client on Windows
+
+1. **Download and Install the WireGuard Client:**  
+   Go to [WireGuard’s official Windows download page](https://download.wireguard.com/windows-client/). Download the installer (`wireguard-installer.exe`) and follow the installation instructions.  
+   ![image](https://github.com/user-attachments/assets/774394aa-9c04-42bf-8e3f-0ef4d87a520a)
+
+
+3. **Create the Client Configuration File:**  
+   Open **Notepad** on your Windows machine and paste the contents of the `client.conf` file that you obtained from your VPS server.  
+![image](https://github.com/user-attachments/assets/5b4f58e0-8a0d-49cb-b9a3-1b219462be0f)
+
+
+4. **Save the Configuration File:**  
+   Save the file as `client.conf` and make sure to select **All files** in the "Save as type" dropdown to avoid accidentally adding `.txt` to the filename. Save it to a convenient location on your computer.  
+![image](https://github.com/user-attachments/assets/f920df01-12df-4d9e-a778-ba54e7076bad)
+
+5. **Import the Tunnel Configuration:**  
+   Open the WireGuard application and click on **Import tunnel(s) from file**.  
+   ![image](https://github.com/user-attachments/assets/1e0a3d4f-21e3-4b3c-abc9-0ab37acba1e5)  
+ 
+   Browse for the `client.conf` file that you saved earlier and select it.  
+   ![image](https://github.com/user-attachments/assets/a4726267-fc56-4ef9-963a-33db00696798)
+
+
+7. **Activate the Tunnel: Part 1 - Initial Connection:**  
+   After importing the tunnel configuration, you will see the tunnel listed in the application. Press the **Activate** button to establish the connection.  
+   ![image](https://github.com/user-attachments/assets/d1a77f3f-5950-4ce4-8769-2fb6da22df48)
+
+
+9. **Activate the Tunnel: Part 2 - Monitoring Status:**  
+   Once the connection is active, the status will change to **Active**, displaying details such as the public key, DNS settings, and data transfer stats. You can monitor the connection in the WireGuard interface to ensure everything is functioning correctly.  
+   ![image](https://github.com/user-attachments/assets/e82ca43e-d469-4fa7-82bb-23128e3f43c6)
+
+
+Your WireGuard connection is now established, allowing secure communication with your VPS.
