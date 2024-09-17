@@ -42,3 +42,108 @@ Before deploying **LAMP** on your Cloudzy VPS using the One-Click App, ensure yo
 8. **Review and Deploy**: After confirming all your settings, click the **“Deploy Now”** button to start deploying your LAMP VPS. You’ll be able to track the progress through the status bar, showing steps like “Preparing Network” and “Initializing.”  
 ![image](https://github.com/user-attachments/assets/4eb3690c-6079-46ad-a9dd-da1a7b1eb0a3)
 
+## Step 3: Access Your LAMP Server
+
+1. **Wait for VPS Creation**: After clicking "Deploy Now," the system will start creating your VPS. The process usually takes a few minutes, during which a progress bar will show steps like “Preparing Network,” “Preparing Disk,” “Initializing,” and finally, “Active.”
+![image](https://github.com/user-attachments/assets/55553e6b-f8ef-42ee-b77d-b63426ca3a0c)
+
+
+2. **Retrieve Login Information**: Once the VPS is created successfully, you’ll be directed to a confirmation screen that displays your server’s IP address, username, and password. Save this information, as it’s required to access your server.  
+![image](https://github.com/user-attachments/assets/edb11ff5-655e-457a-8217-8e4185491c0c)
+
+
+3. **Connect via SSH**:
+   - Open a terminal or SSH client and connect to your VPS using the following command:
+     ```bash
+     ssh root@<Your_VPS_IP_Address>
+     ```
+   - When connecting for the first time, you’ll be asked to confirm the server’s fingerprint. Type `yes` to proceed.  
+     ![image](https://github.com/user-attachments/assets/83246ed3-c759-4260-8954-d6b19817b81f)
+
+   
+   - Enter the password displayed in the VPS creation confirmation screen to log into your server.
+
+4. **LAMP Stack Information**: 
+   After logging in, you will see detailed information about your LAMP stack setup. The following details will be provided:
+   - **Web server name**: The name of your web server (e.g., cloudzy).
+   - **HTTP port**: The default port for web traffic (usually port 80).
+   - **HTTPS port**: The default secure web traffic port (typically port 443).
+   - **Document root**: The directory where your website files are stored (`/root/www` by default).
+   - **MySQL server**: Information such as MySQL port (3306), user (lamp), and password (provided).
+   - **phpMyAdmin HTTP/HTTPS port**: Details for accessing phpMyAdmin.  
+
+   ![image](https://github.com/user-attachments/assets/80ae76bb-9fa1-4379-95f5-7a97893ce88b)
+
+
+5. **View and Edit the Default Virtual Host Configuration**:
+   The default configuration file for your LAMP server’s virtual host is located in `/root/config/vhosts/default.conf`. This file defines how Apache serves your website and includes essential details such as:
+   - **DocumentRoot**: Specifies the directory where your website files are stored (`${APACHE_DOCUMENT_ROOT}`).
+   - **ServerName**: The name of the server (`${APACHE_SERVER_NAME}`).
+   - **SSL Configuration**: Settings for enabling HTTPS using self-signed certificates. The SSL certificate and key files are stored in `/etc/apache2/ssl/cert.pem` and `/etc/apache2/ssl/cert-key.pem`.
+
+   To view this configuration, use the following command:
+   ```bash
+   cat /root/config/vhosts/default.conf
+   ```
+
+   You can also edit the file using a text editor like `nano`:
+   ```bash
+   nano /root/config/vhosts/default.conf
+   ```
+
+   Here is an example of the `default.conf` configuration:
+   ```bash
+   <VirtualHost *:80>
+       ServerAdmin webmaster@localhost
+       DocumentRoot ${APACHE_DOCUMENT_ROOT}
+       ServerName ${APACHE_SERVER_NAME}
+       <Directory ${APACHE_DOCUMENT_ROOT}>
+           AllowOverride all
+       </Directory>
+   </VirtualHost>
+
+   <VirtualHost *:443>
+       ServerAdmin webmaster@localhost
+       DocumentRoot ${APACHE_DOCUMENT_ROOT}
+       ServerName ${APACHE_SERVER_NAME}
+       <Directory ${APACHE_DOCUMENT_ROOT}>
+           AllowOverride all
+       </Directory>
+       SSLEngine on
+       SSLCertificateFile /etc/apache2/ssl/cert.pem
+       SSLCertificateKeyFile /etc/apache2/ssl/cert-key.pem
+   </VirtualHost>
+   ```
+
+This configuration allows your LAMP server to serve websites over HTTP and HTTPS. Your LAMP stack is now fully set up and ready for use.
+
+## Step 4: Access phpMyAdmin and MySQL
+
+Now that your LAMP stack is fully set up, you can manage your MySQL databases and web server using phpMyAdmin. This step will guide you through accessing phpMyAdmin and configuring MySQL.
+
+1. **Create an SSH Tunnel**:
+   - Since phpMyAdmin is not directly accessible from outside your VPS, you’ll need to create an SSH tunnel to access it securely. Use the following command to create the tunnel:
+     ```bash
+     ssh -L 8080:127.0.0.1:8080 root@<Your_VPS_IP_Address> -N
+     ```
+   - This command will forward port `8080` on your local machine to port `8080` on your VPS, allowing you to access phpMyAdmin locally.  
+
+![image](https://github.com/user-attachments/assets/9b487982-85be-415e-ac56-d08d90a42c46)
+
+
+
+2. **Access phpMyAdmin**:
+   - Open your browser and navigate to:
+     ```
+     http://127.0.0.1:8080
+     ```
+   - You will now be able to access the phpMyAdmin page.
+
+3. **Manage Databases with phpMyAdmin**:
+   - Once logged in, you’ll have access to the phpMyAdmin interface where you can create, edit, and manage your MySQL databases.
+   - From the left panel, you can browse through your existing databases like `lamp`, `mysql`, and others.
+   - You can also create new databases, manage users, run SQL queries, and import/export database backups.  
+
+![image](https://github.com/user-attachments/assets/744fc004-6fb1-4914-908f-c85aa1b403e9)
+
+Your MySQL server and phpMyAdmin are now fully configured and accessible through the SSH tunnel. You can start managing your databases securely and efficiently from your local machine.
