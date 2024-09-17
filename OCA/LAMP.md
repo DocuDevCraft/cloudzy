@@ -1,3 +1,8 @@
+# How to Deploy LAMP Stack with Cloudzy’s One-Click App
+
+Deploying a LAMP stack (Linux, Apache, MySQL, PHP) on your Cloudzy VPS using the One-Click App is an efficient and easy way to set up a reliable web hosting environment. LAMP provides the foundational software needed to host dynamic websites and web applications. This guide will take you step-by-step through the process of selecting, configuring, and deploying your LAMP stack, and how to manage your server once it’s running. Whether you’re building a personal website or a professional web application, this tutorial will help you get your LAMP stack up and running in no time.
+
+
 ## Prerequisites
 
 Before deploying **LAMP** on your Cloudzy VPS using the One-Click App, ensure you meet the following requirements:
