@@ -32,8 +32,13 @@ Before deploying **LAMP** on your Cloudzy VPS using the One-Click App, ensure yo
 4. **Review IPv4 and IPv6 Options**: Decide between **IPv6**, which is free, or **IPv4**, which may have a small associated cost. Choose the option that best fits your networking needs.  
    ![image](https://github.com/user-attachments/assets/95c9f9f2-7489-4785-b3f0-9ba6b9f8623f)
 
-5. **Set Up SSH Key (Optional)**: For a secure password-less connection, you can add an SSH key by clicking “Add New SSH Key.” If you're unfamiliar with SSH keys, refer to **[Cloudzy’s guide on SSH key configuration](https://cloudzy.com/kb/linux/connection/)**. If you prefer to use a password login, you can skip this step.
+5. **Set Up SSH Key (Optional)**: For a secure password-less connection, you can add an SSH key by clicking “Add New SSH Key.” If you're unfamiliar with SSH keys, refer to **[Cloudzy’s guide on SSH key configuration](https://cloudzy.com/kb/linux/connection/)**. If you prefer to use a password login, you can skip this step.  
+   ![image](https://github.com/user-attachments/assets/c9f10317-f948-483a-8360-014b4b13639a)
 
-6. **Assign a Hostname**: Enter a unique hostname for your VPS. For example, you can use something like **“LAMP-DTX-2gb”** or customize it according to your preference.
-   
-7. **Review and Deploy**: After confirming all your settings, click the **“Deploy Now”** button to start deploying your LAMP VPS. You’ll be able to track the progress through the status bar, showing steps like “Preparing Network” and “Initializing.”
+
+7. **Assign a Hostname**: Enter a unique hostname for your VPS. For example, you can use something like **“LAMP-DTX-2gb”** or customize it according to your preference.  
+   ![image](https://github.com/user-attachments/assets/c04d56f4-d980-4960-b167-2dc595052e9f)
+
+8. **Review and Deploy**: After confirming all your settings, click the **“Deploy Now”** button to start deploying your LAMP VPS. You’ll be able to track the progress through the status bar, showing steps like “Preparing Network” and “Initializing.”  
+![image](https://github.com/user-attachments/assets/4eb3690c-6079-46ad-a9dd-da1a7b1eb0a3)
+
