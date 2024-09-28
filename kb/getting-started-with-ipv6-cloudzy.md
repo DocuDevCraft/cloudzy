@@ -91,6 +91,30 @@ ssh root@2605:abcd:1234:5678::2
 
 Unlike **IPv4**, where you're often limited to a single address assigned by the Cloudzy Cloud Panel, **IPv6** allows you to choose and manage multiple addresses from your assigned subnet. This flexibility makes it easier to configure your network based on your specific needs.
 
+Here’s the revised instruction:
+
+
+## Enabling IPv4 After VPS Deployment
+
+While Cloudzy assigns an **IPv6** address by default when you deploy your VPS, you might find that some applications or services you wish to use require an **IPv4** address. Fortunately, Cloudzy makes it easy to enable **IPv4** even after your VPS has been deployed.
+
+### Steps to Enable IPv4:
+
+1. **Access the Cloudzy Cloud Panel**: Log in to your Cloudzy account and go to the **Services** section to find your active VPS.
+
+2. **Click on Your VPS**: Locate the VPS you wish to enable IPv4 on and click directly on the VPS name to access the management page.
+
+3. **Enable IPv4**: In the **Access** tab of your VPS settings, you will see an option to **Enable IPv4**. Click on this option.  
+   ![image](https://github.com/user-attachments/assets/f610f1af-5684-485e-84f2-2e9f783556b1)
+
+5. **Confirm IPv4 Enabling**: A pop-up will appear confirming that enabling IPv4 will not incur any additional costs (as of now). Click **Enable** to proceed.  
+   ![image](https://github.com/user-attachments/assets/ff735446-3b16-4a58-a124-132ca1bede99)
+
+5. **IPv4 Assigned**: Once enabled, your VPS will be assigned an **IPv4** address, which will appear in the **Access** section alongside your existing IPv6 address.  
+   ![image](https://github.com/user-attachments/assets/eb2d4bd3-ce7c-41d0-bf67-aaa118ff892c)
+
+Now, with both **IPv4** and **IPv6** enabled, you can use either protocol to access and manage your VPS. This flexibility is beneficial for ensuring compatibility with older systems and services that require IPv4.
+
 ## Setting Up a AAAA Record for IPv6
 
 When you are working with an **IPv6** address, it is important to configure a **DNS AAAA record** to map your domain name to your IPv6 address. The AAAA record is similar to an A record used for IPv4, but it specifically handles IPv6 addresses. This step is crucial if you want your domain name to resolve to an IPv6 address.
