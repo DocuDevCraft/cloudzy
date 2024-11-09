@@ -37,8 +37,11 @@ Before you start deploying **Plesk** on your Cloudzy VPS using the One-Click App
 5. **Set Up SSH Key (Optional)**: For secure, passwordless access to your VPS, you can add an SSH key by clicking “Add New SSH Key.” If you need guidance on setting up SSH keys, refer to **[Cloudzy’s guide on SSH key configuration](https://cloudzy.com/kb/linux/connection/)**. This step is optional; you can skip it if you prefer to use password authentication.  
 ![image](https://github.com/user-attachments/assets/ee8fd4d7-96d7-4748-ad64-9421f0009c3b)
 
-6. **Assign a Hostname**: Enter a hostname for your VPS, like “Plesk-Server” or a custom name that will help you identify this VPS easily.
+6. **Assign a Hostname**: Enter a hostname for your VPS, like “Plesk-Server” or a custom name that will help you identify this VPS easily.  
+   ![image](https://github.com/user-attachments/assets/b070a2fa-7c47-44be-bf4f-024de9238fc1)
 
-7. **Review and Deploy**: After confirming all your settings, click the "Deploy Now" button. The system will begin the deployment process, which you can track through the progress indicator. 
+
+8. **Review and Deploy**: After confirming all your settings, click the "Deploy Now" button. The system will begin the deployment process, which you can track through the progress indicator.  
+![image](https://github.com/user-attachments/assets/f8d6f95b-1e0f-4aaf-a725-8ac2bce45a76)
 
 Your VPS will now be set up with Plesk, and you'll soon be able to access the Plesk interface for management and configuration.
