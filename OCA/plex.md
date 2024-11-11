@@ -45,3 +45,40 @@ Before you start deploying **Plesk** on your Cloudzy VPS using the One-Click App
 ![image](https://github.com/user-attachments/assets/f8d6f95b-1e0f-4aaf-a725-8ac2bce45a76)
 
 Your VPS will now be set up with Plesk, and you'll soon be able to access the Plesk interface for management and configuration.
+
+
+
+## Step 3: Access Your Plesk Server
+
+1. **Wait for VPS Deployment**: After clicking “Deploy Now,” Cloudzy will start setting up your VPS. The deployment process goes through several stages like “Preparing Network,” “Preparing Disk,” and “Initializing.” This might take a few minutes, so please be patient until the status shows “Active.”  
+![image](https://github.com/user-attachments/assets/4a57e911-01c6-4dbb-9348-9cb59ebfb77a)
+
+
+3. **Retrieve Login Credentials**: Once your VPS has been successfully created, a confirmation screen will display your server’s IP address, username, and password. Be sure to save these credentials, as you’ll need them to access your Plesk panel.  
+![image](https://github.com/user-attachments/assets/f783fb9d-0249-4a01-a266-58a33f4ae7a9)
+
+
+5. **Log in via SSH**: Once the deployment is complete, connect to your VPS using SSH to retrieve your Plesk login credentials. Refer to [Cloudzy’s guide on connecting to a Linux VPS via SSH](https://cloudzy.com/kb/connect-to-linux-vps-via-ssh/) for detailed instructions if needed.
+   - Open a terminal (or SSH client) and use the following command:
+     ```bash
+     ssh root@[Your_VPS_IP_Address]
+     ```
+   - Enter the password provided by Cloudzy during the VPS setup.
+
+6. **Retrieve Plesk Login Information**: After logging in, you will see a message displaying your Plesk instance URL along with the **Admin Username** and **Admin Password**. Take note of these credentials, as shown in the terminal output:
+   ```
+   You can now access your Plesk instance at https://[Your_VPS_IP_Address]
+   Admin Username: admin
+   Admin Password: [Your_Plesk_Password]
+   ```
+
+7. **Access Plesk in Browser**:
+   - Open your web browser and navigate to the Plesk URL provided (e.g., `https://[Your_VPS_IP_Address]`).
+   - If a security warning appears due to a self-signed SSL certificate, you can proceed by clicking "Continue" or "Advanced" and then "Proceed."  
+![image](https://github.com/user-attachments/assets/1d6dc3a4-3662-41d3-a002-450f04fbe76b)
+
+
+8. **Log In to Plesk**: Use the **Admin Username** and **Admin Password** from the SSH session to log into the Plesk control panel.  
+![image](https://github.com/user-attachments/assets/f2976909-9b8c-460a-b46b-9eb8bcdf36a4)
+
+Your Plesk instance is now accessible, and you can start managing websites, domains, and applications through the Plesk dashboard.
