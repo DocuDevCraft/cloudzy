@@ -72,13 +72,14 @@ Your VPS will now be set up with Plesk, and you'll soon be able to access the Pl
    Admin Password: [Your_Plesk_Password]
    ```
 
-7. **Access Plesk in Browser**:
-   - Open your web browser and navigate to the Plesk URL provided (e.g., `https://[Your_VPS_IP_Address]`).
+## Step 4: Access and Log In to Plesk
+
+1. **Access Plesk in Browser**:
+   - Open your web browser and navigate to the Plesk URL provided in the SSH terminal output (e.g., `https://[Your_VPS_IP_Address]`).
    - If a security warning appears due to a self-signed SSL certificate, you can proceed by clicking "Continue" or "Advanced" and then "Proceed."  
-![image](https://github.com/user-attachments/assets/1d6dc3a4-3662-41d3-a002-450f04fbe76b)
+     ![image](https://github.com/user-attachments/assets/1d6dc3a4-3662-41d3-a002-450f04fbe76b)
 
-
-8. **Log In to Plesk**: Use the **Admin Username** and **Admin Password** from the SSH session to log into the Plesk control panel.  
-![image](https://github.com/user-attachments/assets/f2976909-9b8c-460a-b46b-9eb8bcdf36a4)
+2. **Log In to Plesk**: Use the **Admin Username** and **Admin Password** provided in the SSH session to access the Plesk control panel.  
+   ![image](https://github.com/user-attachments/assets/f2976909-9b8c-460a-b46b-9eb8bcdf36a4)
 
 Your Plesk instance is now accessible, and you can start managing websites, domains, and applications through the Plesk dashboard.
