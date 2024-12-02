@@ -56,6 +56,34 @@ With Hiddify Manager selected, you are ready to configure your VPS in the next s
    - A progress bar will appear, showing the deployment stages, including **Preparing Network**, **Preparing Disk**, **Initializing**, and **Active**.  
    ![image](https://github.com/user-attachments/assets/07640430-580d-47f2-b766-b5477832a164)
 
+### Step 3: Access Your Hiddify Manager VPS
+
+1. **Wait for VPS Deployment:**  
+   After clicking the **Deploy Now** button, Cloudzy will begin setting up your VPS. The deployment process includes several stages, such as **Preparing Network**, **Preparing Disk**, **Initializing**, and finally, **Active**. This process may take a few minutes.  
+   ![image](https://github.com/user-attachments/assets/d862725c-2727-4a46-ab20-7868cce5e4f1)
+
+
+2. **Retrieve Login Credentials:**  
+   Once your VPS has been successfully created, a confirmation screen will display your server’s **IP Address**, **Username**, and **Password**. Make sure to save these credentials, as you will need them to access your VPS.  
+   ![image](https://github.com/user-attachments/assets/4ee56f0e-0768-40fe-b6ae-5a3aabd33913)
+
+
+3. **Connect to the VPS via SSH:**  
+   - Open your terminal or SSH client.  
+   - Enter the following command, replacing `<Your_VPS_IP_Address>` with the IP address of your VPS:  
+     ```bash
+     ssh root@<Your_VPS_IP_Address>
+     ```  
+   - When prompted, enter the password from the VPS deployment confirmation screen.  
+   - If you receive a security warning about the server's authenticity, type `yes` to proceed.  
+   ![image](https://github.com/user-attachments/assets/ssh-login-prompt)
+
+4. **Verify Hiddify Installation:**  
+   After successfully logging into your VPS, the terminal will show the Hiddify Manager setup interface, allowing you to confirm the installation and proceed to the next steps.  
+   ![image](https://github.com/user-attachments/assets/hiddify-manager-login)
+
+You are now connected to your VPS and ready to configure the Hiddify Manager for secure traffic management. Let’s proceed!
+
 
 After your VPS is deployed successfully, you can move on to access and configure Hiddify Manager.
 
