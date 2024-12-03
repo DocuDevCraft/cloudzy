@@ -56,34 +56,40 @@ With Hiddify Manager selected, you are ready to configure your VPS in the next s
    - A progress bar will appear, showing the deployment stages, including **Preparing Network**, **Preparing Disk**, **Initializing**, and **Active**.  
    ![image](https://github.com/user-attachments/assets/07640430-580d-47f2-b766-b5477832a164)
 
-### Step 3: Access Your Hiddify Manager VPS
+### Step 3: Access Hiddify Manager via SSH
 
-1. **Wait for VPS Deployment:**  
-   After clicking the **Deploy Now** button, Cloudzy will begin setting up your VPS. The deployment process includes several stages, such as **Preparing Network**, **Preparing Disk**, **Initializing**, and finally, **Active**. This process may take a few minutes.  
-   ![image](https://github.com/user-attachments/assets/d862725c-2727-4a46-ab20-7868cce5e4f1)
-
-
-2. **Retrieve Login Credentials:**  
-   Once your VPS has been successfully created, a confirmation screen will display your server’s **IP Address**, **Username**, and **Password**. Make sure to save these credentials, as you will need them to access your VPS.  
-   ![image](https://github.com/user-attachments/assets/4ee56f0e-0768-40fe-b6ae-5a3aabd33913)
-
-
-3. **Connect to the VPS via SSH:**  
-   - Open your terminal or SSH client.  
-   - Enter the following command, replacing `<Your_VPS_IP_Address>` with the IP address of your VPS:  
+1. **Log in to Your VPS via SSH:**  
+   After your VPS has been successfully deployed, connect to it using SSH.  
+   - Use a terminal (or any SSH client) and enter the following command:
      ```bash
      ssh root@<Your_VPS_IP_Address>
-     ```  
-   - When prompted, enter the password from the VPS deployment confirmation screen.  
-   - If you receive a security warning about the server's authenticity, type `yes` to proceed.  
-   ![image](https://github.com/user-attachments/assets/ssh-login-prompt)
+     ```
+   - You will be prompted to enter your VPS root password.
 
-4. **Verify Hiddify Installation:**  
-   After successfully logging into your VPS, the terminal will show the Hiddify Manager setup interface, allowing you to confirm the installation and proceed to the next steps.  
-   ![image](https://github.com/user-attachments/assets/hiddify-manager-login)
-
-You are now connected to your VPS and ready to configure the Hiddify Manager for secure traffic management. Let’s proceed!
+2. **Hiddify Manager Menu:**  
+   Upon successful login, the Hiddify Manager interface will open automatically, displaying a menu with multiple options. Highlight and select **"admin" (Show admin link)** to retrieve the admin interface URL.  
+   ![image](https://github.com/user-attachments/assets/0a6bf71f-9f6d-4753-9055-5b2b79bb4a7d)
 
 
-After your VPS is deployed successfully, you can move on to access and configure Hiddify Manager.
+3. **Access the Admin Interface:**  
+   - After selecting **"admin"**, the terminal will provide the admin interface URL for the Hiddify Manager. Save this URL as you will need it for the next steps.
 
+Your Hiddify Manager is now set up, and you are ready to configure it further using the admin panel.
+
+### Step 4: Hiddify Manager Installation Confirmation and Admin Panel Access
+
+1. **View Installation Confirmation:**  
+   After selecting **"admin"** from the Hiddify Manager menu, the terminal will display a confirmation screen with the following details:  
+   - **Global Information**: Country, city, and IP details of your server.  
+   - **Service Status**: Ensure all listed services (e.g., `hiddify-cli`, `hiddify-nginx`, etc.) are marked as **active**.  
+   - **Admin Access**: A QR code and secure URL are provided to access the Hiddify Manager admin interface.  
+   ![image](https://github.com/user-attachments/assets/7f1d5e6a-6a6d-453d-91a7-c05d03130529)
+
+
+2. **Access the Admin Interface:**  
+   - **Scan the QR Code:** Use your mobile device or QR code scanner to access the admin interface directly.  
+   - **Copy or Click the Link:** Alternatively, copy the secure link or click on it directly in your terminal to open the admin panel in your web browser.  
+     ![image](https://github.com/user-attachments/assets/6c037ee5-53b6-4bc3-990c-65c0de7fdf80)
+
+
+Your Hiddify Manager admin panel is now accessible for further configuration and management!
