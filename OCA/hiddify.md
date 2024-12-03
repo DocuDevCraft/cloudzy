@@ -1,4 +1,8 @@
+# How to Deploy Hiddify Manager with Cloudzy’s One-Click App
 
+Hiddify Manager is a robust and easy-to-use multi-protocol VPN solution designed for privacy enthusiasts and professionals alike. Whether you're setting up a secure connection for personal use or managing large-scale network configurations, Hiddify Manager provides the tools you need to ensure privacy, flexibility, and performance. 
+Cloudzy’s One-Click App makes deploying Hiddify Manager on your VPS incredibly simple, saving you time and effort. With just a few steps, you can install and access Hiddify Manager, ready to customize and deploy to your specific needs. 
+This comprehensive guide will walk you through the entire process—from deploying the VPS with Hiddify Manager pre-installed to accessing and configuring your admin panel. Let’s get started!
 
 ## Prerequisites  
 
